@@ -1,0 +1,13 @@
+services:
+  openwebui:
+    image: ghcr.io/open-webui/open-webui:ollama
+   # network_mode: host
+    volumes:
+      - open-webui:/app/backend/data
+    environment:
+      OLLAMA_HOST: http://127.0.0.1:11434
+    ports:
+     - 3000:8080
+volumes:
+  open-webui:
+
